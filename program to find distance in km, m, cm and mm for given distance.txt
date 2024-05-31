@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main()  
+{ 
+    unsigned long int dist, temp;
+    unsigned long int km, cm, mm, m;  
+  
+    printf("Enter distance: \n");  
+    scanf("%ld", &dist);
+    temp = dist;
+    
+    km = temp * 1.609344;
+    temp = temp % km;
+    
+    m  = km * 1000;
+    temp = temp % m;
+    
+    cm = m * 100;
+    temp = temp % cm;
+    
+    mm = m * 1000;
+    temp = temp % mm;
+    printf("Distance in KiloMeter is %ld\n", km);
+    printf("Distance in Meter is %ld\n", m);  
+    printf("Distance in Centimeter is %ld\n", cm);  
+    printf("Distance in Milimeter is %ld\n", mm);  
+    getch();  
+}  
